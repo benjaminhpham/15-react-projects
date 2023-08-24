@@ -8,6 +8,7 @@ import Accordion from "./projects/project-4-accordion/Accordion";
 import MenuDisplayItem from "./projects/project-5-menu-display-items/MenuDisplayItem";
 import Tabs from "./projects/project-6-tabs/Tabs";
 import ColorGenerator from "./projects/project-9-color-generator/ColorGenerator";
+import Grocery from "./projects/project-10-grocery/Grocery";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <Accordion /> */}
       {/* <MenuDisplayItem /> */}
       {/* <Tabs /> */}
-      <ColorGenerator />
+      {/* <ColorGenerator /> */}
+      <Grocery />
     </>
   );
 }
