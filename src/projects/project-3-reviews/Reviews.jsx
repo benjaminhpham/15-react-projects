@@ -15,6 +15,7 @@ export default function Reviews() {
     setSelectedIndex((prev) => (prev > 0 ? prev - 1 : reviews.length - 1));
   };
 
+  // helper function for generating a random index
   const generateRandomIndex = () => {
     // randomly generate an index between 0 and reviews.length - 1
     return Math.floor(Math.random() * reviews.length);
