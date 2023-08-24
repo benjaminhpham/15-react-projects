@@ -2,8 +2,6 @@ import { useState } from "react";
 import data from "./data.js";
 import Question from "./Question";
 
-console.log(data);
-
 export default function Accordion() {
   const [questions, setQuestions] = useState(data);
 

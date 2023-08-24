@@ -6,6 +6,7 @@ import Tours from "./projects/project-2-tours/Tours";
 import Reviews from "./projects/project-3-reviews/Reviews";
 import Accordion from "./projects/project-4-accordion/Accordion";
 import MenuDisplayItem from "./projects/project-5-menu-display-items/MenuDisplayItem";
+import Tabs from "./projects/project-6-tabs/Tabs";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <Tours /> */}
       {/* <Reviews /> */}
       {/* <Accordion /> */}
-      <MenuDisplayItem />
+      {/* <MenuDisplayItem /> */}
+      <Tabs />
     </>
   );
 }
