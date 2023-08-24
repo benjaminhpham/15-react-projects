@@ -7,6 +7,7 @@ import Reviews from "./projects/project-3-reviews/Reviews";
 import Accordion from "./projects/project-4-accordion/Accordion";
 import MenuDisplayItem from "./projects/project-5-menu-display-items/MenuDisplayItem";
 import Tabs from "./projects/project-6-tabs/Tabs";
+import ColorGenerator from "./projects/project-9-color-generator/ColorGenerator";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <Reviews /> */}
       {/* <Accordion /> */}
       {/* <MenuDisplayItem /> */}
-      <Tabs />
+      {/* <Tabs /> */}
+      <ColorGenerator />
     </>
   );
 }
