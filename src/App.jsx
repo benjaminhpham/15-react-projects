@@ -16,10 +16,10 @@ function App() {
       {/* <Tours /> */}
       {/* <Reviews /> */}
       {/* <Accordion /> */}
-      {/* <MenuDisplayItem /> */}
+      <MenuDisplayItem />
       {/* <Tabs /> */}
       {/* <ColorGenerator /> */}
-      <Grocery />
+      {/* <Grocery /> */}
     </>
   );
 }
