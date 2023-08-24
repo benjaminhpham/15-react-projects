@@ -1,5 +1,17 @@
 import { useEffect, useState } from "react";
 
+const getData = () => {
+  return JSON.parse(localStorage.getItem("grocery-list"));
+};
+
+const setData = (data) => {
+  localStorage.setItem("grocery-list", JSON.stringify(data));
+};
+
+const removeData = () => {
+  localStorage.removeItem("grocery-list");
+};
+
 const GroceryItem = ({
   item,
   setList,
@@ -77,7 +89,9 @@ const GroceryForm = ({
   };
 
   const handleAdd = () => {
-    setList((prev) => [...prev, item]);
+    const updatedList = [...list, item];
+    setList(updatedList);
+    setData(updatedList);
     resetForm();
     setAlertMessage("Item Added To The List");
   };
@@ -86,6 +100,7 @@ const GroceryForm = ({
     const updatedList = [...list];
     updatedList[index] = item;
     setList(updatedList);
+    setData(updatedList);
     resetForm();
     setAlertMessage("Value Change");
   };
@@ -118,7 +133,7 @@ const GroceryForm = ({
 };
 
 export default function Grocery() {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(getData() ? getData() : []);
   const [item, setItem] = useState("");
   const [isEdit, setIsEdit] = useState(false);
   const [index, setIndex] = useState(0);
@@ -140,6 +155,7 @@ export default function Grocery() {
 
   const handleDeleteAll = () => {
     setList([]);
+    removeData();
     setAlertMessage("Empty List");
   };
 
