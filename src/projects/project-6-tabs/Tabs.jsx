@@ -35,20 +35,20 @@ export default function Tabs() {
 
   const { company, dates, duties, title } = jobs[value];
 
+  const buttons = jobs.map(({ company }, index) => (
+    <button
+      onClick={() => setValue(index)}
+      key={index}
+      className={`job-btn ${index === value && "active-btn"}`}
+    >
+      {company}
+    </button>
+  ));
+
   return (
     <section>
       <h1>Experience</h1>
-      <div>
-        {jobs.map((job, index) => (
-          <button
-            onClick={() => setValue(index)}
-            key={index}
-            className={`job-btn ${index === value && "active-btn"}`}
-          >
-            {job.company}{" "}
-          </button>
-        ))}
-      </div>
+      <div>{buttons}</div>
       <h2>{title}</h2>
       <h3>{company}</h3>
       <h4>{dates}</h4>

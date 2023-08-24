@@ -1,11 +1,10 @@
-.job-btn {
+.job-btn,
+.job-btn:hover,
+.job-btn:focus {
   outline: none;
+  border: none;
 }
 
-.job-btn:hover {
-  outline: none;
-}
-
-.active-btn {
+.job-btn.active-btn {
   border: 2px solid lightseagreen;
 }
